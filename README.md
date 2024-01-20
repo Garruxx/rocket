@@ -4,10 +4,9 @@ Este código busca mostrar mis habilidades cómo diseñador y desarrollador web,
 
 ## Objetivos del diseño 
   [1. Actualizar el diseño a uno moderno](#diseño-moderno)   
-  [2. Hacerlo adaptable a diferentes dispositivos](#diseño-adaptable)
-  [3. Mejorar el buscador](#buscador)
+  [2. Hacerlo adaptable a diferentes    dispositivos](#diseño-adaptable)   
+  [3. Mejorar el buscador](#buscador)    
   [4. Mejorar la experiencia de usuario](#eperiencia-de-usuario-ux)
-
   [5. Que el diseño mobile sea cómodo, todo al alcance del pulgar el cual se basa en la ley de Fitts ]()
 
 > Ley de fitts https://es.wikipedia.org/wiki/Ley_de_Fitts 
