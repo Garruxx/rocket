@@ -1,0 +1,71 @@
+a
+    text-decoration: none
+.item
+    height: 350px
+    width: 270px
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    color: #5C3445
+    border-radius: 7px
+    box-shadow: 0px 0px 6px 1.3px #3333
+    transition: .35s box-shadow
+    margin: 11px
+    &:hover
+        box-shadow: 0px 0px 1px 1px #3333
+
+    .img
+        height: calc( 100% - 85px )
+        background-repeat: no-repeat
+        background-size: cover
+        div
+            width: 100%
+            height: 100%
+            backdrop-filter: blur(11px)
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #0000
+            img
+                max-height: 100%
+                max-width: 100%
+                margin: auto
+    .details
+        height: 85px
+        padding: 9px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .title
+            display: flex
+            justify-content: space-between
+            align-items: center
+            h2
+                max-height: 3.5em
+                font-size: .8em
+                overflow: hidden
+                text-overflow: ellipsis
+                white-space: pre-line
+                line-height: 1.2em
+            img
+                max-height: 25px
+                max-width: 40px
+
+        .price
+            font-weight: 700
+            font-size: 1em
+            span
+                padding-right: 11px
+                &.prevPrice
+                    opacity: .5
+                    text-decoration: line-through
+                    font-size: .8em
+
+@media (max-width: 800px)
+    a .item 
+        width: 160px
+        height: 270px
+        .price span
+            display: block
+            font-size: .7em
+        

@@ -1,0 +1,68 @@
+.container
+    --slider-width: 80vw
+    display: flex
+    flex-wrap: nowrap
+    width: var(--slider-width)
+    overflow: hidden
+    height: 400px
+    flex-direction: column
+    position: relative
+    margin: auto
+    z-index: 1
+    .visible
+        height: calc( 100% - 40px )
+        overflow: hidden
+    .slider
+        height: 100%
+        display: flex
+        width: max-content
+        transition-property: transform
+    .controls
+        position: absolute
+        height: 40px
+        width: 100%
+        bottom: 0
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .controls_container
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: 900
+            color: #EF636B
+            user-select: none
+            span
+                font-family: monospace
+                font-size: 25px
+                cursor: pointer
+                line-height: 0
+            .bullet
+                cursor: pointer
+                width: 12px
+                height: 12px
+                border-radius: 40px
+                margin: 7px
+                border: solid 2px #EF636B
+                background: #0000
+                transition: background .35s
+                &.selected
+                    background: linear-gradient(90deg, #EF636B 0%, #ED196D 99.49%)
+                    &:hover
+                        background: linear-gradient(90deg, #EF636B 0%, #ED196D 99.49%)
+
+                &:hover
+                    background: #EF636B44
+
+@media (max-width: 800px)
+    .container 
+        --slider-width: 100vw
+        box-sizing: border-box
+        margin: 0
+        padding: 0
+        height: 60vh
+
+        .controls
+            bottom: 80px
+            

@@ -1,0 +1,104 @@
+.menu
+    width: 65px
+    background: linear-gradient(90deg, #EF636B 0%, #ED196D 99.49%)
+    height: 100%
+    border-radius: 0 7px 0 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding: 7px
+    box-sizing: border-box
+
+    .item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 22px 0
+        cursor: pointer
+        img
+            width: 40px
+        span
+            font-weight: 600
+            color: #fff
+            padding-top: 7px
+            font-size: 15px
+
+.mobile_menu
+    display: flex
+    justify-content: center
+    flex-direction: row-reverse
+    border-top: 2px solid #f3e8e9
+    z-index: 470
+    .mb_item
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0 22px
+        color: #55494a
+        transition: color .35s
+        svg
+            width: 30px
+            height: 40px
+            font-weight: 600
+        &:active
+            color: #FF4651
+
+    label[active="true"]
+        .mb_item
+            color: #FF4651
+    label[active="true"] ~ .home
+            color: #55494a
+
+    .home
+        color: #FF4651
+
+@media (max-width: 800px)
+    input.check:checked ~ .menu
+        right: 0
+
+    .menu
+        position: absolute
+        z-index: 45
+        right: -100vw
+        width: 60vw
+        transition: .35s right
+        height: calc( 100vh - 62px )
+        border-radius: 0
+        background: linear-gradient(90deg, #EF636B 0%, #ED196D 99.49%)
+
+        &::after
+            content: ""
+            display: block
+            position: fixed
+            width: 40vw
+            height: calc( 100vh - 62px )
+            top: 0
+            margin-right: 100vw
+            background: #0003
+            backdrop-filter: blur(4px)
+            z-index: -1
+        h2
+            display: flex
+            align-items: center
+            height: 40vh
+            color: #fff
+        .top
+            flex: 1
+            width: 90%
+        .item
+            flex-direction: row
+            align-items: left
+            justify-content: start
+            width: 100%
+            img
+                margin-right: 22px
+            span
+                font-size: 18px
+
+@media (min-width: 800px)
+    .menu    h2
+        display: none
+    .mobile_menu
+        display: none
